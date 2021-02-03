@@ -16,4 +16,10 @@ public:
 		game
 	};
 	static Status status;
+
+	static const int PADDLE_WIDTH;
+	static const int PADDLE_HEIGHT;
+	static const int PADDLE_BEGINNING_POSITION_X;
+	static const int PADDLE_BEGINNING_POSITION_Y;
+	static float paddleSpeed;
 };
