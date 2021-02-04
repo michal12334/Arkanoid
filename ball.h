@@ -6,6 +6,15 @@ class Ball :public sf::Drawable {
 public:
 	Ball();
 	void update();
+	float getLeft();
+	float getRight();
+	float getTop();
+	float getBottom();
+
+	void setCollisionLeft(bool value);
+	void setCollisionRight(bool value);
+	void setCollisionTop(bool value);
+	void setCollisionBottom(bool value);
 
 	static int radious;
 	static int beginningPositionX;
@@ -18,4 +27,12 @@ private:
 	sf::CircleShape shape;
 	sf::Vector2f position;
 	sf::Vector2f speed;
+
+	bool isCollisionLeft;
+	bool isCollisionRight;
+	bool isCollisionTop;
+	bool isCollisionBottom;
+
+	void move();
+	void executeCollsion();
 };
