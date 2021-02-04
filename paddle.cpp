@@ -4,10 +4,10 @@
 using namespace sf;
 
 Paddle::Paddle() {
-	position.x = BEGINNING_POSITION_X;
-	position.y = BEGINNING_POSITION_Y;
+	position.x = beginningPositionX;
+	position.y = beginningPositionY;
 	rectangle.setPosition(position);
-	rectangle.setSize(Vector2f{(float) WIDTH, (float) HEIGHT});
+	rectangle.setSize(Vector2f{(float) width, (float) height});
 	rectangle.setFillColor(Color::Red);
 }
 
@@ -29,11 +29,11 @@ float Paddle::getLeft() {
 }
 
 float Paddle::getRight() {
-	return position.x + WIDTH;
+	return position.x + width;
 }
 
 float Paddle::getBottom() {
-	return position.y + HEIGHT;
+	return position.y + height;
 }
 
 float Paddle::getTop() {

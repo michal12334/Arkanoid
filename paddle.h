@@ -11,10 +11,10 @@ public:
 	float getTop();
 	float getBottom();
 
-	static const int WIDTH;
-	static const int HEIGHT;
-	static const int BEGINNING_POSITION_X;
-	static const int BEGINNING_POSITION_Y;
+	static int width;
+	static int height;
+	static int beginningPositionX;
+	static int beginningPositionY;
 	static float speed;
 
 private:

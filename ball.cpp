@@ -4,13 +4,13 @@
 using namespace sf;
 
 Ball::Ball() {
-	shape.setRadius(RADIOUS);
+	shape.setRadius(radious);
 	shape.setFillColor(Color::Cyan);
-	position.x = BEGINNING_POSITION_X;
-	position.y = BEGINNING_POSITION_Y;
+	position.x = beginningPositionX;
+	position.y = beginningPositionY;
 	shape.setPosition(position);
-	speed.x = BEGINNING_SPEED_X;
-	speed.y = BEGINNING_SPEED_Y;
+	speed.x = beginningSpeedX;
+	speed.y = beginningSpeedY;
 }
 
 void Ball::update() {
