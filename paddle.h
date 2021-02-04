@@ -6,6 +6,10 @@ class Paddle :public sf::Drawable{
 public:
 	Paddle();
 	void update();
+	float getLeft();
+	float getRight();
+	float getTop();
+	float getBottom();
 
 private:
 	void draw(sf::RenderTarget &target, sf::RenderStates state) const override;

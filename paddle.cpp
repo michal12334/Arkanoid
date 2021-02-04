@@ -24,6 +24,22 @@ void Paddle::update() {
 	rectangle.setPosition(position);
 }
 
+float Paddle::getLeft() {
+	return position.x;
+}
+
+float Paddle::getRight() {
+	return position.x + Program::PADDLE_WIDTH;
+}
+
+float Paddle::getBottom() {
+	return position.y + Program::PADDLE_HEIGHT;
+}
+
+float Paddle::getTop() {
+	return position.y;
+}
+
 void Paddle::draw(RenderTarget &target, RenderStates state) const {
 	target.draw(rectangle, state);
 }
