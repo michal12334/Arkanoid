@@ -4,20 +4,20 @@
 using namespace sf;
 
 Paddle::Paddle() {
-	position.x = Program::PADDLE_BEGINNING_POSITION_X;
-	position.y = Program::PADDLE_BEGINNING_POSITION_Y;
+	position.x = BEGINNING_POSITION_X;
+	position.y = BEGINNING_POSITION_Y;
 	rectangle.setPosition(position);
-	rectangle.setSize(Vector2f{(float) Program::PADDLE_WIDTH, (float) Program::PADDLE_HEIGHT});
+	rectangle.setSize(Vector2f{(float) WIDTH, (float) HEIGHT});
 	rectangle.setFillColor(Color::Red);
 }
 
 void Paddle::update() {
 	float move = 0;
 	if(isLeftKeyPressed()) {
-		move -= Program::paddleSpeed;
+		move -= speed;
 	}
 	if(isRightKeyPressed()) {
-		move += Program::paddleSpeed;
+		move += speed;
 	}
 	move *= Program::getDeltaTime();
 	position.x += move;
@@ -29,11 +29,11 @@ float Paddle::getLeft() {
 }
 
 float Paddle::getRight() {
-	return position.x + Program::PADDLE_WIDTH;
+	return position.x + WIDTH;
 }
 
 float Paddle::getBottom() {
-	return position.y + Program::PADDLE_HEIGHT;
+	return position.y + HEIGHT;
 }
 
 float Paddle::getTop() {

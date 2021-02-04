@@ -11,6 +11,12 @@ public:
 	float getTop();
 	float getBottom();
 
+	static const int WIDTH;
+	static const int HEIGHT;
+	static const int BEGINNING_POSITION_X;
+	static const int BEGINNING_POSITION_Y;
+	static float speed;
+
 private:
 	void draw(sf::RenderTarget &target, sf::RenderStates state) const override;
 	sf::RectangleShape rectangle;
