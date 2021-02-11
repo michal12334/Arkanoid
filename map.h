@@ -4,7 +4,7 @@
 
 class Map {
 public:
-	virtual std::vector<Block> getBlocksVector() = 0;
+	virtual Blocks getBlocks() = 0;
 
 	static const int DEFAULT_MAP;
 	static int currentMap;
