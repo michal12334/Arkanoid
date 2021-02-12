@@ -63,6 +63,12 @@ void MainMenu::setExitButtonText() {
 }
 
 void MainMenu::update() {
+	if(playButton->isClicked()) {
+		Program::status = Program::Status::game;
+	}
+	if(exitButton->isClicked()) {
+		Program::status = Program::Status::exit;
+	}
 }
 
 void MainMenu::draw() {
