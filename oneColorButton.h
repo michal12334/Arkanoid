@@ -10,7 +10,9 @@ public:
 	void setSize(sf::Vector2f size);
 	virtual void update() = 0;
 
+protected:
+	sf::RectangleShape shape;
+
 private:
 	void draw(sf::RenderTarget &target, sf::RenderStates state) const override;
-	sf::RectangleShape shape;
 };
