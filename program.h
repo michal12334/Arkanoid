@@ -15,7 +15,8 @@ public:
 	enum Status {
 		game,
 		pauseMenu,
-		mainMenu
+		mainMenu,
+		exit
 	};
 	static Status status;
 };
