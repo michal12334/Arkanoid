@@ -7,6 +7,7 @@ public:
 	bool isClicked();
 	void setPosition(sf::Vector2f position);
 	void setSize(sf::Vector2f size);
+	virtual void update() = 0;
 
 	static bool mouseLeftButtonPressed;
 	static void updateMouseLeftButtoPressed();
