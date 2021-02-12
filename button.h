@@ -11,11 +11,11 @@ public:
 	static bool mouseLeftButtonPressed;
 	static void updateMouseLeftButtoPressed();
 
-private:
-	//void draw(sf::RenderTarget &target, sf::RenderStates state) const override;
+protected:
 	sf::Vector2f position;
 	sf::Vector2f size;
 
+private:
 	bool isMouseInsideButton();
 	bool isMouseLeftButtonPressed();
 
