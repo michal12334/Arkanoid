@@ -13,7 +13,9 @@ public:
 	static float getDeltaTime();
 
 	enum Status {
-		game
+		game,
+		pauseMenu,
+		mainMenu
 	};
 	static Status status;
 };
