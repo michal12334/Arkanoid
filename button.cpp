@@ -5,7 +5,7 @@ using namespace sf;
 
 bool Button::mouseLeftButtonPressed = false;
 
-void Button::updateMouseLeftButtoPressed() {
+void Button::updateMouseLeftButtonPressed() {
 	if(Mouse::isButtonPressed(Mouse::Left))
 		mouseLeftButtonPressed = true;
 	else

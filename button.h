@@ -10,7 +10,7 @@ public:
 	virtual void update() = 0;
 
 	static bool mouseLeftButtonPressed;
-	static void updateMouseLeftButtoPressed();
+	static void updateMouseLeftButtonPressed();
 
 protected:
 	sf::Vector2f position;
