@@ -3,13 +3,15 @@
 
 using namespace sf;
 
-bool Button::mouseLeftButtonPressed = false;
+bool Button::mouseLeftButtonPressedCurrentFrame = false;
+bool Button::mouseLeftButtonPressedLastFrame = false;
 
 void Button::updateMouseLeftButtonPressed() {
+	mouseLeftButtonPressedLastFrame = mouseLeftButtonPressedCurrentFrame;
 	if(Mouse::isButtonPressed(Mouse::Left))
-		mouseLeftButtonPressed = true;
+		mouseLeftButtonPressedCurrentFrame = true;
 	else
-		mouseLeftButtonPressed = false;
+		mouseLeftButtonPressedCurrentFrame = false;
 }
 
 bool Button::isClicked() {
@@ -23,7 +25,7 @@ bool Button::isMouseInsideButton() {
 }
 
 bool Button::isMouseLeftButtonPressed() {
-	return Mouse::isButtonPressed(Mouse::Left) && !mouseLeftButtonPressed;
+	return Mouse::isButtonPressed(Mouse::Left) && !mouseLeftButtonPressedLastFrame;
 }
 
 int Button::getLeft() {

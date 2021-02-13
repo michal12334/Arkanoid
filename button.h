@@ -9,7 +9,8 @@ public:
 	void setSize(sf::Vector2f size);
 	virtual void update() = 0;
 
-	static bool mouseLeftButtonPressed;
+	static bool mouseLeftButtonPressedCurrentFrame;
+	static bool mouseLeftButtonPressedLastFrame;
 	static void updateMouseLeftButtonPressed();
 
 protected:
