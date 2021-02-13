@@ -15,6 +15,7 @@ private:
 	Button *exitButton;
 
 	sf::Font font;
+	sf::Text mainMenuText;
 	sf::Text playButtonText;
 	sf::Text chooseMapButtonText;
 	sf::Text exitButtonText;
@@ -23,6 +24,7 @@ private:
 	const int BUTTON_TEXT_SIZE{40};
 	void setTexts();
 	void setFont();
+	void setMainMenuText();
 	void setPlayButtonText();
 	void setChooseMapButtonText();
 	void setExitButtonText();

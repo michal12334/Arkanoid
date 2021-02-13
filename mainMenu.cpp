@@ -32,6 +32,7 @@ MainMenu::MainMenu() {
 
 void MainMenu::setTexts() {
 	setFont();
+	setMainMenuText();
 	setPlayButtonText();
 	setChooseMapButtonText();
 	setExitButtonText();
@@ -39,6 +40,14 @@ void MainMenu::setTexts() {
 
 void MainMenu::setFont() {
 	font.loadFromFile("C:\\Windows\\Fonts\\arial.ttf");
+}
+
+void MainMenu::setMainMenuText() {
+	mainMenuText.setFont(font);
+	mainMenuText.setString("MENU");
+	mainMenuText.setCharacterSize(100);
+	mainMenuText.setFillColor(Color::White);
+	mainMenuText.setPosition(Vector2f{255.0f, 40.0f});
 }
 
 void MainMenu::setPlayButtonText() {
@@ -75,4 +84,5 @@ void MainMenu::draw() {
 	Program::window->draw(*playButton);
 	Program::window->draw(*chooseMapButton);
 	Program::window->draw(*exitButton);
+	Program::window->draw(mainMenuText);
 }
