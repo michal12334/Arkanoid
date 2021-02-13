@@ -30,6 +30,12 @@ MainMenu::MainMenu() {
 	this->exitButton = exitButton;
 }
 
+MainMenu::~MainMenu() {
+	delete playButton;
+	delete chooseMapButton;
+	delete exitButton;
+}
+
 void MainMenu::setTexts() {
 	setFont();
 	setMainMenuText();
