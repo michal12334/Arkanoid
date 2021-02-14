@@ -8,6 +8,8 @@ class CollisionChecker {
 public:
 	void checkCollisionBetweenPaddleAndBall(Paddle *paddle, Ball *ball);
 	void checkCollisionBetweenBlockAndBall(Block *block, Ball *ball);
+	void checkCollisionBetweenBallAndTopLeftRightSidesOfWindow(Ball *ball);
+	void checkCollisionBetweenBallAndBottomSideOfWindow(Ball *ball, bool &result);
 
 private:
 	float distance2(sf::Vector2f point1, sf::Vector2f point2);

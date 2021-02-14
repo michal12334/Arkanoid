@@ -1,5 +1,6 @@
 #include "collisionChecker.h"
 #include <iostream>
+#include "program.h"
 
 using namespace std;
 using namespace sf;
@@ -87,6 +88,27 @@ void CollisionChecker::checkCollisionBetweenBlockAndBall(Block *block, Ball *bal
 		ball->setCollisionBottom(true);
 		block->setEnable(false);
 	}
+}
+
+void CollisionChecker::checkCollisionBetweenBallAndTopLeftRightSidesOfWindow(Ball *ball) {
+	if(ball->getTop() <= 0) {
+		ball->setCollisionTop(true);
+	}
+	if(ball->getLeft() <= 0) {
+		ball->setCollisionLeft(true);
+	}
+	if(ball->getRight() >= Program::WINDOW_WIDTH) {
+		ball->setCollisionRight(true);
+	}
+}
+
+void CollisionChecker::checkCollisionBetweenBallAndBottomSideOfWindow(Ball *ball, bool &result) {
+	if(ball->getBottom() >= Program::WINDOW_HEIGHT) {
+		ball->setCollisionBottom(true);
+		result = true;
+		return;
+	}
+	result = false;
 }
 
 float CollisionChecker::distance2(Vector2f point1, Vector2f point2) {
