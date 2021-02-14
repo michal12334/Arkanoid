@@ -25,13 +25,13 @@ int Paddle::width = 80;
 int Paddle::height = 20;
 int Paddle::beginningPositionX = 360;
 int Paddle::beginningPositionY = 600;
-float Paddle::speed = 125;
+float Paddle::speed = 250;
 
 int Ball::radious = 10;
 int Ball::beginningPositionX = 150;
 int Ball::beginningPositionY = 600;
-int Ball::beginningSpeedX = 90;
-int Ball::beginningSpeedY = -90;
+int Ball::beginningSpeedX = 180;
+int Ball::beginningSpeedY = -180;
 
 const int Block::DEFAULT_SIZE = 50;
 
