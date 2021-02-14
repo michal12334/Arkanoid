@@ -10,6 +10,8 @@ public:
 	float getRight();
 	float getTop();
 	float getBottom();
+	sf::Vector2f getCenter();
+	float getRadious();
 
 	void setCollisionLeft(bool value);
 	void setCollisionRight(bool value);

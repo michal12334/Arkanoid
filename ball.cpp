@@ -1,7 +1,9 @@
 #include "ball.h"
 #include "program.h"
+#include <cmath>
 
 using namespace sf;
+using namespace std;
 
 Ball::Ball() {
 	shape.setRadius(radious);
@@ -30,13 +32,13 @@ void Ball::move() {
 
 void Ball::executeCollsion() {
 	if(isCollisionLeft)
-		speed.x = speed.x > 0 ? speed.x : -speed.x;
+		speed.x = abs(speed.x);
 	if(isCollisionRight)
-		speed.x = speed.x > 0 ? -speed.x : speed.x;
+		speed.x = -abs(speed.x);
 	if(isCollisionTop)
-		speed.y = speed.y > 0 ? speed.y : -speed.y;
+		speed.y = abs(speed.y);
 	if(isCollisionBottom)
-		speed.y = speed.y > 0 ? -speed.y : speed.y;
+		speed.y = -abs(speed.y);
 
 	setCollisionLeft(false);
 	setCollisionRight(false);
@@ -74,6 +76,14 @@ float Ball::getTop() {
 
 float Ball::getBottom() {
 	return position.y + 2 * radious;
+}
+
+Vector2f Ball::getCenter() {
+	return Vector2f{position.x + radious, position.y + radious};
+}
+
+float Ball::getRadious() {
+	return radious;
 }
 
 void Ball::draw(RenderTarget &target, RenderStates state) const {
