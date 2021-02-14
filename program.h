@@ -16,7 +16,9 @@ public:
 		game,
 		pauseMenu,
 		mainMenu,
-		exit
+		exit,
+		youWonPage,
+		youLostPage
 	};
 	static Status status;
 };
