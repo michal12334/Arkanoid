@@ -1,4 +1,5 @@
 #include "page.h"
+#include "program.h"
 
 using namespace sf;
 using namespace std;
@@ -11,6 +12,7 @@ Page::Page(string textString) {
 	setTextString(textString);
 	setTextColor(Color::White);
 	setTextPosition(Vector2f{200.0f, 200.0f});
+	timeToEnd = 3;
 }
 
 void Page::setFont(string fontName) {
@@ -34,6 +36,13 @@ void Page::setTextPosition(Vector2f position) {
 	text.setPosition(position);
 }
 
-void Page::draw(RenderTarget &target, RenderStates state) const {
-	target.draw(text, state);
+void Page::update() {
+	time += Program::getDeltaTime();
+	if(time >= timeToEnd) {
+		Program::status = Program::Status::mainMenu;
+	}
+}
+
+void Page::draw()  {
+	Program::window->draw(text);
 }
