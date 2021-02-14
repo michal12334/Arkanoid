@@ -15,7 +15,12 @@ void Button::updateMouseLeftButtonPressed() {
 }
 
 bool Button::isClicked() {
-	return isMouseInsideButton() && isMouseLeftButtonPressed();
+	if(isMouseInsideButton() && isMouseLeftButtonPressed()) {
+		mouseLeftButtonPressedLastFrame = true;
+		mouseLeftButtonPressedCurrentFrame = true;
+		return true;
+	}
+	return false;
 }
 
 bool Button::isMouseInsideButton() {
