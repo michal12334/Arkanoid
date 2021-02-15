@@ -50,4 +50,5 @@ Map* Game::getCurrentMap() {
 	case 1:
 		return new Map1();
 	}
+	return new Map1();
 }
