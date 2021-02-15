@@ -3,6 +3,7 @@
 #include "twoColorButton.h"
 
 class TwoColorButtonWithText :public TwoColorButton {
+public:
 	TwoColorButtonWithText();
 	TwoColorButtonWithText(sf::Color color1, sf::Color color2, sf::Text text);
 	void setTextPosition(sf::Vector2f position);
