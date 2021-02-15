@@ -4,11 +4,12 @@
 using namespace sf;
 
 Paddle::Paddle() {
-	position.x = beginningPositionX;
-	position.y = beginningPositionY;
+	position.x = defaultBeginningPositionX;
+	position.y = defaultBeginningPositionY;
 	rectangle.setPosition(position);
-	rectangle.setSize(Vector2f{(float) width, (float) height});
+	rectangle.setSize(Vector2f{(float) defaultWidth, (float) defaultHeight});
 	rectangle.setFillColor(Color::Red);
+	setSpeed(defaultSpeed);
 }
 
 void Paddle::update() {
@@ -29,15 +30,27 @@ float Paddle::getLeft() {
 }
 
 float Paddle::getRight() {
-	return position.x + width;
+	return position.x + defaultWidth;
 }
 
 float Paddle::getBottom() {
-	return position.y + height;
+	return position.y + defaultHeight;
 }
 
 float Paddle::getTop() {
 	return position.y;
+}
+
+void Paddle::setSize(Vector2f size) {
+	rectangle.setSize(size);
+}
+
+void Paddle::setPosition(Vector2f position) {
+	rectangle.setPosition(position);
+}
+
+void Paddle::setSpeed(float speed) {
+	this->speed = speed;
 }
 
 void Paddle::draw(RenderTarget &target, RenderStates state) const {

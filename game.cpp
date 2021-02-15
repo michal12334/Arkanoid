@@ -8,6 +8,8 @@ using namespace sf;
 Game::Game() {
 	Map *currentMap = getCurrentMap();
 	blocks = currentMap->getBlocks();
+	ball = currentMap->getBall();
+	paddle = currentMap->getPaddle();
 	delete currentMap;
 }
 

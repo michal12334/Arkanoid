@@ -6,13 +6,13 @@ using namespace sf;
 using namespace std;
 
 Ball::Ball() {
-	shape.setRadius(radious);
+	setRadious(defaultRadious);
 	shape.setFillColor(Color::Cyan);
-	position.x = beginningPositionX;
-	position.y = beginningPositionY;
+	position.x = defaultBeginningPositionX;
+	position.y = defaultBeginningPositionY;
 	shape.setPosition(position);
-	speed.x = beginningSpeedX;
-	speed.y = beginningSpeedY;
+	speed.x = defaultBeginningSpeedX;
+	speed.y = defaultBeginningSpeedY;
 	isCollisionLeft = false;
 	isCollisionRight = false;
 	isCollisionTop = false;
@@ -62,12 +62,26 @@ void Ball::setCollisionBottom(bool value) {
 	isCollisionBottom = value;
 }
 
+void Ball::setRadious(float radious) {
+	this->radious = radious;
+	shape.setRadius(radious);
+}
+
+void Ball::setPosition(Vector2f position) {
+	this->position = position;
+	shape.setPosition(position);
+}
+
+void Ball::setSpeed(Vector2f speed) {
+	this->speed = speed;
+}
+
 float Ball::getLeft() {
 	return position.x;
 }
 
 float Ball::getRight() {
-	return position.x + 2 * radious;
+	return position.x + 2 * defaultRadious;
 }
 
 float Ball::getTop() {
@@ -75,11 +89,11 @@ float Ball::getTop() {
 }
 
 float Ball::getBottom() {
-	return position.y + 2 * radious;
+	return position.y + 2 * defaultRadious;
 }
 
 Vector2f Ball::getCenter() {
-	return Vector2f{position.x + radious, position.y + radious};
+	return Vector2f{position.x + defaultRadious, position.y + defaultRadious};
 }
 
 float Ball::getRadious() {

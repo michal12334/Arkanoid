@@ -21,17 +21,17 @@ const int Program::WINDOW_HEIGHT = 800;
 int Program::frameRateLimit = 60;
 Program::Status Program::status = Program::Status::mainMenu;
 
-int Paddle::width = 80;
-int Paddle::height = 20;
-int Paddle::beginningPositionX = 360;
-int Paddle::beginningPositionY = 600;
-float Paddle::speed = 250;
+int Paddle::defaultWidth = 80;
+int Paddle::defaultHeight = 20;
+int Paddle::defaultBeginningPositionX = 360;
+int Paddle::defaultBeginningPositionY = 600;
+float Paddle::defaultSpeed = 250;
 
-int Ball::radious = 10;
-int Ball::beginningPositionX = 150;
-int Ball::beginningPositionY = 600;
-int Ball::beginningSpeedX = 180;
-int Ball::beginningSpeedY = -180;
+int Ball::defaultRadious = 10;
+int Ball::defaultBeginningPositionX = 150;
+int Ball::defaultBeginningPositionY = 600;
+int Ball::defaultBeginningSpeedX = 180;
+int Ball::defaultBeginningSpeedY = -180;
 
 const int Block::DEFAULT_SIZE = 50;
 

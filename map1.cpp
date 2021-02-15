@@ -21,3 +21,11 @@ Map1::Map1() {
 Blocks Map1::getBlocks() {
 	return blocks;
 }
+
+Ball Map1::getBall() {
+	return ball;
+}
+
+Paddle Map1::getPaddle() {
+	return paddle;
+}
