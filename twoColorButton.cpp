@@ -11,7 +11,7 @@ TwoColorButton::TwoColorButton(Color color1, Color color2) :OneColorButton(color
 
 void TwoColorButton::update() {
 	if(isMouseInsideButton())
-		shape.setFillColor(color1);
-	else
 		shape.setFillColor(color2);
+	else
+		shape.setFillColor(color1);
 }
