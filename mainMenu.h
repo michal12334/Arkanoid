@@ -2,6 +2,7 @@
 
 #include "menu.h"
 #include "oneColorButtonWithText.h"
+#include "twoColorButtonWithText.h"
 
 class MainMenu :public Menu {
 public:
@@ -20,7 +21,8 @@ private:
 	sf::Text playButtonText;
 	sf::Text chooseMapButtonText;
 	sf::Text exitButtonText;
-	sf::Color buttonColor;
+	sf::Color buttonColor1;
+	sf::Color buttonColor2;
 	sf::Color buttonTextColor;
 	const int BUTTON_TEXT_SIZE{40};
 	void setTexts();

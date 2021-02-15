@@ -6,13 +6,14 @@ using namespace sf;
 using namespace std;
 
 MainMenu::MainMenu() {
-	buttonColor = Color::Red;
+	buttonColor1 = Color::Red;
+	buttonColor2 = Color::Green;
 	buttonTextColor = Color::Black;
 	setTexts();
 
-	OneColorButtonWithText *playButton = new OneColorButtonWithText(buttonColor, playButtonText);
-	OneColorButtonWithText *chooseMapButton = new OneColorButtonWithText(buttonColor, chooseMapButtonText);
-	OneColorButtonWithText *exitButton = new OneColorButtonWithText(buttonColor, exitButtonText);
+	TwoColorButtonWithText *playButton = new TwoColorButtonWithText(buttonColor1, buttonColor2, playButtonText);
+	TwoColorButtonWithText *chooseMapButton = new TwoColorButtonWithText(buttonColor1, buttonColor2, chooseMapButtonText);
+	TwoColorButtonWithText *exitButton = new TwoColorButtonWithText(buttonColor1, buttonColor2, exitButtonText);
 
 	playButton->setTextPosition(Vector2f{100.0f, 23.0f});
 	chooseMapButton->setTextPosition(Vector2f{15.0f, 23.0f});
@@ -84,6 +85,9 @@ void MainMenu::update() {
 	if(exitButton->isClicked()) {
 		Program::status = Program::Status::exit;
 	}
+	playButton->update();
+	chooseMapButton->update();
+	exitButton->update();
 }
 
 void MainMenu::draw() {
