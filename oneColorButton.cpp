@@ -18,6 +18,9 @@ void OneColorButton::setSize(sf::Vector2f size) {
 	shape.setSize(size);
 }
 
+void OneColorButton::update() {
+}
+
 void OneColorButton::draw(RenderTarget &target, RenderStates state) const {
 	target.draw(shape, state);
 }

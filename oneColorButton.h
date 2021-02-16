@@ -8,7 +8,7 @@ public:
 	OneColorButton(sf::Color color);
 	void setPosition(sf::Vector2f position);
 	void setSize(sf::Vector2f size);
-	virtual void update() = 0;
+	void update();
 
 protected:
 	sf::RectangleShape shape;

@@ -15,3 +15,7 @@ void TwoColorButton::update() {
 	else
 		shape.setFillColor(color1);
 }
+
+void TwoColorButton::draw(RenderTarget &target, RenderStates state) const {
+	target.draw(shape, state);
+}

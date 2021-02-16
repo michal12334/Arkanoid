@@ -9,6 +9,7 @@ public:
 	void update();
 
 private:
+	void draw(sf::RenderTarget &target, sf::RenderStates state) const override;
 	sf::Color color1;
 	sf::Color color2;
 };
