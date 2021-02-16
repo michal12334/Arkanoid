@@ -53,6 +53,14 @@ void Paddle::setSpeed(float speed) {
 	this->speed = speed;
 }
 
+Vector2f Paddle::getPosition() {
+	return position;
+}
+
+Vector2f Paddle::getSize() {
+	return rectangle.getSize();
+}
+
 void Paddle::draw(RenderTarget &target, RenderStates state) const {
 	target.draw(rectangle, state);
 }

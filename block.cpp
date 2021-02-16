@@ -44,6 +44,24 @@ float Block::getBottom() {
 	return position.y + size.y;
 }
 
+void Block::setPosition(Vector2f position) {
+	this->position = position;
+	shape.setPosition(position);
+}
+
+void Block::setSize(Vector2f size) {
+	this->size = size;
+	shape.setSize(size);
+}
+
+Vector2f Block::getPosition() {
+	return position;
+}
+
+Vector2f Block::getSize() {
+	return size;
+}
+
 void Block::draw(RenderTarget &target, RenderStates state) const {
 	if(enable)
 		target.draw(shape, state);

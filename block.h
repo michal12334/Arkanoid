@@ -15,6 +15,11 @@ public:
 
 	static const int DEFAULT_SIZE;
 
+	void setPosition(sf::Vector2f position);
+	void setSize(sf::Vector2f size);
+	sf::Vector2f getPosition();
+	sf::Vector2f getSize();
+
 private:
 	void draw(sf::RenderTarget &target, sf::RenderStates state) const override;
 	bool enable;

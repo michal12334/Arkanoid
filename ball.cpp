@@ -76,6 +76,10 @@ void Ball::setSpeed(Vector2f speed) {
 	this->speed = speed;
 }
 
+Vector2f Ball::getPosition() {
+	return position;
+}
+
 float Ball::getLeft() {
 	return position.x;
 }

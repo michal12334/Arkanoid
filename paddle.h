@@ -20,6 +20,8 @@ public:
 	void setSize(sf::Vector2f size);
 	void setPosition(sf::Vector2f position);
 	void setSpeed(float speed);
+	sf::Vector2f getPosition();
+	sf::Vector2f getSize();
 
 private:
 	void draw(sf::RenderTarget &target, sf::RenderStates state) const override;

@@ -21,6 +21,7 @@ public:
 	void setRadious(float radious);
 	void setPosition(sf::Vector2f position);
 	void setSpeed(sf::Vector2f speed);
+	sf::Vector2f getPosition();
 
 	static int defaultRadious;
 	static int defaultBeginningPositionX;
