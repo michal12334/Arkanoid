@@ -4,7 +4,7 @@
 using namespace sf;
 
 MapChooseMenu::MapChooseMenu() {
-	currentMap = 0;
+	currentMap = Map::currentMap - 1;
 	Map *map = new Map1;
 	mapDraws.push_back(new MapDraw{map});
 	delete map;
