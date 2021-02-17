@@ -123,7 +123,7 @@ int main() {
 			}
 			if(mainMenu != NULL) {
 				delete mainMenu;
-				mainMenu = new MainMenu();
+				mainMenu = NULL;
 			}
 			mapChooseMenu->update();
 			mapChooseMenu->draw();
