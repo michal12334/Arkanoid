@@ -3,6 +3,7 @@
 #include "menu.h"
 #include "mapDraw.h"
 #include "map1.h"
+#include "map2.h"
 #include <vector>
 #include "twoColorButtonWithText.h"
 #include "twoColorButton.h"
@@ -15,7 +16,7 @@ public:
 	void draw();
 
 private:
-	int NUMBER_OF_MAPS{1};
+	int NUMBER_OF_MAPS{2};
 	int currentMap;
 	std::vector<MapDraw*> mapDraws;
 

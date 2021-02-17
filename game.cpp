@@ -1,6 +1,7 @@
 #include "game.h"
 #include "program.h"
 #include "map1.h"
+#include "map2.h"
 #include "collisionChecker.h"
 
 using namespace sf;
@@ -51,6 +52,9 @@ Map* Game::getCurrentMap() {
 	switch(Map::currentMap) {
 	case 1:
 		return new Map1();
+
+	case 2:
+		return new Map2();
 	}
 	return new Map1();
 }

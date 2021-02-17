@@ -8,6 +8,9 @@ MapChooseMenu::MapChooseMenu() {
 	Map *map = new Map1;
 	mapDraws.push_back(new MapDraw{map});
 	delete map;
+	map = new Map2;
+	mapDraws.push_back(new MapDraw{map});
+	delete map;
 	for(int i = 0; i < NUMBER_OF_MAPS; i++) {
 		mapDraws[i]->setPosition(Vector2f{200.0f, 150.0f});
 		mapDraws[i]->setSize(Vector2f{400.0f, 400.0f});
