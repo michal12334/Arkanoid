@@ -16,8 +16,10 @@ private:
 	Blocks blocks;
 	sf::Vector2f position;
 	sf::Vector2f size;
-
 	sf::Vector2f scale;
+
+	sf::Vector2f oldScale;
+	sf::Vector2f oldPosition;
 
 	void setBall(Map *map);
 	void setPaddle(Map *map);
@@ -26,4 +28,10 @@ private:
 	void setBall();
 	void setPaddle();
 	void setBlocks();
+	void setBallPosition();
+	void setBallSize();
+	void setPaddlePosition();
+	void setPaddleSize();
+	void setBlocksPosition();
+	void setBlocksSize();
 };
