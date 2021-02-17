@@ -62,6 +62,10 @@ Vector2f Block::getSize() {
 	return size;
 }
 
+void Block::setColor(Color color) {
+	shape.setFillColor(color);
+}
+
 void Block::draw(RenderTarget &target, RenderStates state) const {
 	if(enable)
 		target.draw(shape, state);

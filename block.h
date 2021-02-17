@@ -19,6 +19,7 @@ public:
 	void setSize(sf::Vector2f size);
 	sf::Vector2f getPosition();
 	sf::Vector2f getSize();
+	void setColor(sf::Color color);
 
 private:
 	void draw(sf::RenderTarget &target, sf::RenderStates state) const override;
