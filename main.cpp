@@ -10,6 +10,7 @@
 #include "pauseMenu.h"
 #include "youWonPage.h"
 #include "youLostPage.h"
+#include "mapChooseMenu.h"
 
 using namespace std;
 using namespace sf;
@@ -44,6 +45,7 @@ int main() {
 	Game *game = NULL;
 	Menu *mainMenu = NULL;
 	Menu *pauseMenu = NULL;
+	Menu *mapChooseMenu = NULL;
 	Page *youWonPage = NULL;
 	Page *youLostPage = NULL;
 	bool isEnd = false;
@@ -87,6 +89,10 @@ int main() {
 				delete pauseMenu;
 				pauseMenu = NULL;
 			}
+			if(mapChooseMenu != NULL) {
+				delete mapChooseMenu;
+				mapChooseMenu = NULL;
+			}
 			if(youLostPage != NULL) {
 				delete youLostPage;
 				youLostPage = NULL;
@@ -109,6 +115,18 @@ int main() {
 			}
 			pauseMenu->update();
 			pauseMenu->draw();
+			break;
+
+		case Program::Status::mapChooseMenu:
+			if(mapChooseMenu == NULL) {
+				mapChooseMenu = new MapChooseMenu();
+			}
+			if(mainMenu != NULL) {
+				delete mainMenu;
+				mainMenu = new MainMenu();
+			}
+			mapChooseMenu->update();
+			mapChooseMenu->draw();
 			break;
 
 		case Program::Status::youWonPage:

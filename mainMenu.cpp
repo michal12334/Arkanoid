@@ -85,6 +85,9 @@ void MainMenu::update() {
 	if(exitButton->isClicked()) {
 		Program::status = Program::Status::exit;
 	}
+	if(chooseMapButton->isClicked()) {
+		Program::status = Program::Status::mapChooseMenu;
+	}
 	playButton->update();
 	chooseMapButton->update();
 	exitButton->update();
