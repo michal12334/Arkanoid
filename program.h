@@ -16,6 +16,7 @@ public:
 		game,
 		pauseMenu,
 		mainMenu,
+		mapChooseMenu,
 		exit,
 		youWonPage,
 		youLostPage
