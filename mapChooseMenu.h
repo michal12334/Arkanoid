@@ -16,7 +16,6 @@ public:
 	void draw();
 
 private:
-	int NUMBER_OF_MAPS{2};
 	int currentMap;
 	std::vector<MapDraw*> mapDraws;
 

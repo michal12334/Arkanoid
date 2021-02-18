@@ -15,6 +15,4 @@ private:
 	Paddle paddle;
 	Ball ball;
 	Blocks blocks;
-
-	Map *getCurrentMap();
 };

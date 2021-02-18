@@ -3,11 +3,13 @@
 #include "map1.h"
 #include "map2.h"
 #include "collisionChecker.h"
+#include "mapGetter.h"
 
 using namespace sf;
 
 Game::Game() {
-	Map *currentMap = getCurrentMap();
+	MapGetter mapGetter;
+	Map *currentMap = mapGetter.getMap(Map::currentMap);
 	blocks = currentMap->getBlocks();
 	ball = currentMap->getBall();
 	paddle = currentMap->getPaddle();
@@ -46,15 +48,4 @@ void Game::draw() {
 	Program::window->draw(paddle);
 	Program::window->draw(ball);
 	Program::window->draw(blocks);
-}
-
-Map* Game::getCurrentMap() {
-	switch(Map::currentMap) {
-	case 1:
-		return new Map1();
-
-	case 2:
-		return new Map2();
-	}
-	return new Map1();
 }
