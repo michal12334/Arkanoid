@@ -8,5 +8,5 @@ public:
 	int getNumberOfMaps();
 
 private:
-	const int NUMBER_OF_MAPS{2};
+	const int NUMBER_OF_MAPS{3};
 };
