@@ -46,6 +46,7 @@ void Paddle::setSize(Vector2f size) {
 }
 
 void Paddle::setPosition(Vector2f position) {
+	this->position = position;
 	rectangle.setPosition(position);
 }
 
