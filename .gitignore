@@ -1,0 +1,7 @@
+/x64
+/.vs
+arkanoid.sln
+arkanoid.vcxproj
+arkanoid.vcxproj.user
+arkanoid.vcxproj.filters
+lines.sh
